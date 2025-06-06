@@ -1,10 +1,10 @@
 # Pacman on Chipkit Uno32 Board
 _IS1500 Computer Organization and Components, 9 credits at KTH Royal Institute of Technology_, Autumn 2023  
 Republished code primarily developed by Tenzin Sangpo Choedon  
-Skeleton declaration provided by KTH  
+Skeleton code (gameplay.S, stubs.c, vectors.S) provided by Axel Isaksson and F Lundevall at KTH as clearly stated at the top of the specified files   
 
 ## 📄 Overview
-This project implements networking applications through the socket API. This entails designing the client and server side of the client-server communication architercture. The client side is a general-purpose TCP client that can communicate with servers through different application protocols. The web server in this project processes the http requests through calling TCPClient.askServer(). This HTTPAsk server is also concurrent which implies it can process the request of multiple clients in parallel. The HTTP request can be made in the web broswer and the resulting HTTP response is displayed in the web browser.
+This project implements pacman game logic on a uno22 chipkit board. 
 
 ## 🗂️ Table of Contents
 
@@ -16,41 +16,39 @@ This project implements networking applications through the socket API. This ent
 ## 🏗️ Project Structure
 
 root/  
-├── tcpclient/  
-│   └── TCPClient.java  
-├── ConcHTTPAsk.java  
-├── MyRunnable.java  
-├── README.md  
-└── .gitignore  
+├── src/                     # C source codes  
+├── pixil-images/            # Pixelated images and python script for generating bitmaps from these images  
+├── pixil-files/             # Pixil files used in https://www.pixilart.com/draw#  
+└── README.md  
 
 ## ✅ Prerequisites
 
-**Java 18**  
-- Required Java version:  
+**GCC**  
+- Required GNU Compiler Collection:  
   ```bash
-  sudo apt install openjdk-18-jdk
+  sudo apt install gcc
   ```
 
-  **curl**  
+  **Make**  
 - Install curl using:  
   ```bash
-  sudo apt install curl
+  sudo apt install make
   ```
 
 ## 🚀 Usage
 
 Run the scripts in this order:
 
-1. **Client connects with a TCP server through terminal**  
+1. **Generate pixmaps from images**  
    ```bash
-   java TCPAsk time.nist.gov 13
+   python3 genpix.py map.png 
    ```
-1. **Run the HTTPAsk server**  
+2. **Upload code to uno32 board**  
    ```bash
-   java ConcHTTPAsk 8888
+   . /opt/mcb32tools/environment/ make
    ```
-2. **Open TCP connection through web-based approach and send GET request**  
+3. **Install on uno32 board**  
    ```bash
-   curl http://hostname.domain/ask?hostname=time.nist.gov&limit=1200&port=13
+   make install TTYDEV=/dev/ttyUSB0 
    ```
-
+   
