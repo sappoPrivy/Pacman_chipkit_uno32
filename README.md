@@ -43,11 +43,12 @@ Run the scripts in this order:
    ```bash
    python3 genpix.py map.png 
    ```
-2. **Upload code to uno32 board**  
+2. **Set up environment and build project**  
    ```bash
-   . /opt/mcb32tools/environment/ make
+   . /opt/mcb32tools/environment/  
+    make
    ```
-3. **Install on uno32 board**  
+3. **Install compiled code to the uno32 board**  
    ```bash
    make install TTYDEV=/dev/ttyUSB0 
    ```
