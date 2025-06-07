@@ -29,7 +29,7 @@ root/
   sudo apt install gcc
   ```
 
-  **Make**  
+**Make**  
 - Install curl using:  
   ```bash
   sudo apt install make
