@@ -4,7 +4,7 @@ Republished code primarily developed by Tenzin Sangpo Choedon
 Skeleton code (gameplay.S, stubs.c, vectors.S) provided by Axel Isaksson and F Lundevall at KTH as clearly stated at the top of the specified files   
 
 ## 📄 Overview
-This project implements pacman game logic on a uno22 chipkit board. 
+This project implements pacman game logic on a uno32 chipkit board. 
 
 ## 🗂️ Table of Contents
 
