@@ -30,7 +30,7 @@ root/
   ```
 
 **Make**  
-- Install curl using:  
+- Install make using:  
   ```bash
   sudo apt install make
   ```
