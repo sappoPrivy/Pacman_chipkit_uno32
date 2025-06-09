@@ -1,6 +1,6 @@
 # Pacman on Chipkit Uno32 Board
 _IS1500 Computer Organization and Components, 9 credits at KTH Royal Institute of Technology_, Autumn 2023  
-Republished code primarily developed by Tenzin Sangpo Choedon  
+Code primarily developed by Tenzin Sangpo Choedon (republished)
 Skeleton code (gameplay.S, stubs.c, vectors.S) provided by Axel Isaksson and F Lundevall at KTH as clearly stated at the top of the specified files   
 
 ## 📄 Overview
