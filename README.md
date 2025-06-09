@@ -45,7 +45,7 @@ Run the scripts in this order:
    ```
 2. **Set up environment and build project**  
    ```bash
-   . /opt/mcb32tools/environment/  
+   cd . /opt/mcb32tools/environment/  
     make
    ```
 3. **Install compiled code to the uno32 board**  
